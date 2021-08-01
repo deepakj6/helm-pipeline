@@ -1,13 +1,13 @@
 #!/bin/bash
 set -e
 
-echo Namespace = "$1"
-echo Releasename = "$2"
+echo Namespace = "$2"
+echo Releasename = "$1"
 echo "----------------------Installing pages----------------------------------"
 
 
-NAMESPACE="$1"
-RELEASE_NAME="$2"
+NAMESPACE="$2"
+RELEASE_NAME="$1"
 
 kubectl get ns "$NAMESPACE" &> /dev/null || kubectl create ns "$NAMESPACE"
 
